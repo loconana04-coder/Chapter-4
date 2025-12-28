@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <title>My Digital CV - Nadia Jackson</title>
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center;
+            background: #003366; /* Embry-Riddle Blue */
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        header img {
+            border-radius: 50%;
+            border: 4px solid #fff;
+            margin-bottom: 10px;
+        }
+
+        header a {
+            color: #add8e6;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        /* Section Styling */
+        h2 {
+            border-bottom: 2px solid #003366;
+            padding-bottom: 5px;
+            color: #003366;
+            margin-top: 30px;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #003366;
+            color: white;
+        }
+
+        /* Form Styling */
+        #contact-form {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* Ensures padding doesn't affect width */
+        }
+
+        button {
+            background-color: #003366;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #00509e;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Nadia Jackson</h1>
+        <h3>Mechanical Engineering Student</h3>
+        <img src="profile.jpg" alt="Profile picture of Nadia Jackson" width="150">
+        <p>
+            <a href="https://www.linkedin.com/in/NadiaJackson" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/loconana04-coder" target="_blank">GitHub</a> |
+            <a href="mailto:loconana04@gmail.com">Email Me</a>
+        </p>
+    </header>
+
+    <section id="summary">
+        <h2>Summary</h2>
+        <p>
+            Mechanical Engineering student at Embry-Riddle Aeronautical University with a strong foundation in 
+            design and manufacturing. Originally from Ohio and currently based in Florida, I am focused on 
+            computational tools and programming languages to solve complex engineering challenges.
+        </p>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <ul>
+            <li><strong>BS in Mechanical Engineering</strong> – Embry-Riddle Aeronautical University (2023–2027)</li>
+            <li><strong>High School Diploma</strong> – Lakota West High School (2019–2023)</li>
+        </ul>
+    </section>
+
+    <section id="coursework">
+        <h2>Technical Proficiency & Coursework</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Subject/Software</th>
+                    <th>Proficiency Level</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Design Software</td>
+                    <td>CATIA V5 & SolidWorks</td>
+                    <td>Intermediate</td>
+                </tr>
+                <tr>
+                    <td>Programming</td>
+                    <td>MatLab</td>
+                    <td>In Progress</td>
+                </tr>
+                <tr>
+                    <td>Manufacturing</td>
+                    <td>CNC Milling & Manual Lathe</td>
+                    <td>Hands-on</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div id="contact-form">
+            <form action="#" method="post">
+                
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="email@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="123-456-7890">
+                </div>
+
+                <div class="form-group">
+                    <label for="org">Organization:</label>
+                    <input type="text" id="org" name="organization" placeholder="Company or University">
+                </div>
+
+                <div class="form-group">
+                    <label for="reason">Reason for Contact:</label>
+                    <select id="reason" name="reason">
+                        <option value="job">Job Offer / Internship</option>
+                        <option value="collaboration">Project Collaboration</option>
+                        <option value="feedback">General Feedback</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="How can I help you?" required></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>
